@@ -19,14 +19,6 @@
           
           <category> 1 </category>
           
-          <category> 2 </category>
-          
-          <category> 3 </category>
-          
-          <category> 4 </category>
-          
-          <category> 5 </category>
-          
       </categories>
       
       
@@ -46,9 +38,9 @@
     
     
     <entry>
-      <title>timeline</title>
-      <link href="/timeline/index.html"/>
-      <url>/timeline/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -57,9 +49,9 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>timeline</title>
+      <link href="/timeline/index.html"/>
+      <url>/timeline/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
