@@ -179,7 +179,7 @@
 
     <style>
       body{
-        background-image: url(/img/bg.png);
+        background-image: url(/img/bg.jpg);
       }
     </style>
 
@@ -233,7 +233,7 @@
 
     
         <meta property="article:published_time" content="Fri Dec 28 2018 20:14:54 GMT+0800">
-        <meta property="article:modified_time" content="Sat Dec 29 2018 22:03:03 GMT+0800">
+        <meta property="article:modified_time" content="Sat Dec 29 2018 22:06:58 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -260,7 +260,7 @@
     "mainEntityOfPage": "https://Jiahao-Z.github.io/2018/12/28/hello-world/index.html",
     "headline": "Hello World",
     "datePublished": "Fri Dec 28 2018 20:14:54 GMT+0800",
-    "dateModified": "Sat Dec 29 2018 22:03:03 GMT+0800",
+    "dateModified": "Sat Dec 29 2018 22:06:58 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "chao0",
@@ -611,23 +611,26 @@
         
     
 
-    <!-- Categories  -->
-    
-        <li class="dropdown">
-            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                
-                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
-                
-                分类
-                <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-                <li>
-                <a class="sidebar_archives-link" href="/categories/Life/">Life<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Life/test/">test<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Life/test/1/">1<span class="sidebar_archives-count">1</span></a>
-            </li></ul>
-        </li>
-        
-    
+    <!-- categories -->
+            <li class="dropdown">
+                <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                    <i class="material-icons sidebar-material-icons">apps</i>
+                    <?php if ($this->options->langis == '0'): ?> Categories
+                    <?php elseif ($this->options->langis == '1'): ?> 分类
+                    <?php endif; ?>
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu" for="show-category-button">
+                    <?php $this->widget('Widget_Metas_Category_List')->to($category); ?>
+                    <?php while ($category->next()): ?>
+                    <li>
+                        <a href="<?php $category->permalink(); ?>" title="<?php $category->name(); ?>">
+                            <?php $category->name(); ?>
+                        </a>
+                    </li>
+                    <?php endwhile; ?>
+                </ul>
+            </li>
 
     <!-- Pages  -->
     

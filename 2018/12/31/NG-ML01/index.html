@@ -37,7 +37,7 @@
     
     <title>
         
-            分类: Life | 
+            吴恩达机器学习笔记--第一周 | 
         
         chao0&#39;s blog
     </title>
@@ -49,7 +49,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="chao0">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="blog">
+    <meta name="keywords" content="blog,机器学习,笔记">
 
     <!-- Import lsloader -->
     <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
@@ -226,15 +226,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://Jiahao-Z.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="分类: Life | chao0&#39;s blog">
+    <meta property="og:title" content="吴恩达机器学习笔记--第一周 | chao0&#39;s blog">
     <meta property="og:image" content="https://Jiahao-Z.github.io/img/favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="机器学习"> <meta property="og:article:tag" content="笔记"> 
 
+    
+        <meta property="article:published_time" content="Mon Dec 31 2018 18:50:00 GMT+0800">
+        <meta property="article:modified_time" content="Mon Dec 31 2018 19:15:13 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="分类: Life | chao0&#39;s blog">
+    <meta name="twitter:title" content="吴恩达机器学习笔记--第一周 | chao0&#39;s blog">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="https://Jiahao-Z.github.io/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image">
@@ -242,13 +245,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://Jiahao-Z.github.io/categories/Life/index.html">
+        <link rel="canonical" href="https://Jiahao-Z.github.io/2018/12/31/NG-ML01/index.html">
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://Jiahao-Z.github.io/2018/12/31/NG-ML01/index.html",
+    "headline": "吴恩达机器学习笔记--第一周",
+    "datePublished": "Mon Dec 31 2018 18:50:00 GMT+0800",
+    "dateModified": "Mon Dec 31 2018 19:15:13 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "chao0",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Stay hungry Stay Foolish"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "chao0&#39;s blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",机器学习,笔记blog",
+    "description": "",
+}
+</script>
 
 
     
@@ -282,100 +315,242 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
-        
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#引言"><span class="post-toc-number">1.</span> <span class="post-toc-text">引言</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#欢迎（Welcome）"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">欢迎（Welcome）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#什么是机器学习（What-is-Machine-Learning）"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">什么是机器学习（What is Machine Learning）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#监督学习（Supervised-Learning）"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">监督学习（Supervised  Learning）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#无监督学习（Unsupervised-Learning）、"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">无监督学习（Unsupervised Learning）、</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#2-单变量线性回归（Linear-Regression-with-One-Variable）"><span class="post-toc-number">2.</span> <span class="post-toc-text">2 单变量线性回归（Linear Regression with One Variable）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#模型表示（Model-Representation）"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">模型表示（Model Representation）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#代价函数（Cost-Function）"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">代价函数（Cost Function）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#代价函数的直观理解Ⅰ（Cost-Function-IntuitionⅠ）"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">代价函数的直观理解Ⅰ（Cost Function - IntuitionⅠ）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#代价函数的直观理解Ⅱ（Cost-Function-IntuitionⅡ）"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">代价函数的直观理解Ⅱ（Cost Function - IntuitionⅡ）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#梯度下降（Gradient-Descent）"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">梯度下降（Gradient Descent）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#梯度下降的直观理解（Gradient-Descent-Intuition）"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">梯度下降的直观理解（Gradient Descent Intuition）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#梯度下降的线性回归（Gradient-Descent-For-Linear-Regression）"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">梯度下降的线性回归（Gradient Descent For Linear Regression）</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#线性代数回顾（Linear-Algebra-Review）"><span class="post-toc-number">3.</span> <span class="post-toc-text">线性代数回顾（Linear Algebra Review）</span></a></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/12/28/hello-world/">Hello World</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Welcome to Hexo
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/12/28/hello-world/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="chao0's avatar">
-            </div>
-            <div>
-                <strong>chao0</strong>
-                <span>12月 28, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/Life/">Life</a>, <a class="post_category-link" href="/categories/Life/test/">test</a>, <a class="post_category-link" href="/categories/Life/test/1/">1</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                吴恩达机器学习笔记--第一周
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar">
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>chao0</strong>
+        <span>12月 31, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/机器学习/">机器学习</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/笔记/">笔记</a>
+    </li></ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=吴恩达机器学习笔记--第一周&url=https://Jiahao-Z.github.io/2018/12/31/NG-ML01/index.html&pic=https://Jiahao-Z.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=吴恩达机器学习笔记--第一周&url=https://Jiahao-Z.github.io/2018/12/31/NG-ML01/index.html&via=chao0" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://Jiahao-Z.github.io/2018/12/31/NG-ML01/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://Jiahao-Z.github.io/2018/12/31/NG-ML01/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://Jiahao-Z.github.io/2018/12/31/NG-ML01/index.html&title=吴恩达机器学习笔记--第一周" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><h2 id="欢迎（Welcome）"><a href="#欢迎（Welcome）" class="headerlink" title="欢迎（Welcome）"></a>欢迎（Welcome）</h2><p>blahblah，机器学习很厉害，你们快来学</p>
+<h2 id="什么是机器学习（What-is-Machine-Learning）"><a href="#什么是机器学习（What-is-Machine-Learning）" class="headerlink" title="什么是机器学习（What is Machine Learning）"></a>什么是机器学习（What is Machine Learning）</h2><p>Arthur Samuel“在进行特定编程的情况下，给予计算机 学习能力的领域”</p>
+<p>Tom Mitchell“一个好的学习问题定义如下，一个程序被认为能从经验 E 中学习，解决任务 T，达到性能度量值 P，当且仅当，有了经验 E 后，经过 P 评判，程序在处理 T 时的性能有所提升。我认为经验 E 就是程序上万次的自我练习的经验而任务 T 就是下棋。性能度量值 P 呢，就是它在与一 些新的对手比赛时，赢得比赛的概率”</p>
+<h2 id="监督学习（Supervised-Learning）"><a href="#监督学习（Supervised-Learning）" class="headerlink" title="监督学习（Supervised  Learning）"></a>监督学习（Supervised  Learning）</h2><p>监督学习即给学习算法一个数据集。这个数据集由“正确答案”组成，再根据这些样本做出预测。在房价的例子中，我们给了一系列房子的数据，我们给定数据集中每个样本的正确价格， 即它们实际的售价然后运用学习算法，算出更多的正确答案</p>
+<p>监督学习又叫回归问题（regression  problem）。我们通常试着推测一个连续值的结果，如房价。房价实际上是一系列离散的值，但我们将之看成实数、标量，所以又把它看成一个连续的值。回归即指：目标是预测一个连续的输出值 </p>
+<p>分类问题（classification problem）：目标是预测离散值的输出，如肿瘤的良性/恶性      </p>
+<p>支持向量机（Support Vector Machine）算法：由于在机器学习问题中通常有大量的特征，故需要有算法能让电脑处理无穷多的特征</p>
+<h2 id="无监督学习（Unsupervised-Learning）、"><a href="#无监督学习（Unsupervised-Learning）、" class="headerlink" title="无监督学习（Unsupervised Learning）、"></a>无监督学习（Unsupervised Learning）、</h2><p>无监督学习的数据集中没有任何的标签、或有相同的标签，不知如何处理，也未告知每个数据点是什么。针对这样的数据集，无监督学习能判断出数据有n个不同的聚集簇。所以又叫做聚类算法（clustering algorithm）</p>
+<p>可用于如基因分类、大数据中心（解决什么样的计算机易于协同工作）、社交网络分析（自动给出朋友分组，如常发邮件、Facebook好友etc）、市场分割（将顾客划分到不同的细分市场中，更有效的进行销售）、天文数据分析、鸡尾酒算法（分离两个音频）<br>鸡尾酒算法：[W,s,v] = svd((repmat(sum(x.<em>x,1),size(x,1),1).</em>x)*x’);</p>
+<h1 id="2-单变量线性回归（Linear-Regression-with-One-Variable）"><a href="#2-单变量线性回归（Linear-Regression-with-One-Variable）" class="headerlink" title="2 单变量线性回归（Linear Regression with One Variable）"></a>2 单变量线性回归（Linear Regression with One Variable）</h1><h2 id="模型表示（Model-Representation）"><a href="#模型表示（Model-Representation）" class="headerlink" title="模型表示（Model Representation）"></a>模型表示（Model Representation）</h2><p>我们将要用来描述这个回归问题的标记如下:<br>m    训练集中实例的数量    特征/输入变量<br>xy    目标变量/输出变量<br>(x,y)    训练集中的实例<br>(,) 第i个观察实例<br>h    学习算法的解决方案或函数也称为假设（hypothesis）</p>
+<p>监督学习工作方式如下：</p>
+<p>h是一个x到y的映射，一种可能的表达：，因为只含有一个特征/输入变量，所以叫做单变量线性回归问题</p>
+<h2 id="代价函数（Cost-Function）"><a href="#代价函数（Cost-Function）" class="headerlink" title="代价函数（Cost Function）"></a>代价函数（Cost Function）</h2><p>需要选择合适的参数（parameters）和，参数决定了得到的直线相对于训练集的准确程度。目标就在于选择出能使建模误差的平方和能够最小的模型参数，即代价函数<br>p.s.均方误差之所以除以2，是由于带了平方，之后要用到梯度下降法，需要求导，这样可把2消掉，一个简化计算的技巧</p>
+<p>绘制一个等高线，三个坐标分别为、、，即在三维空间中存在一个使最小的点<br>代价函数（平方误差函数、平方误差代价函数），之所以求误差平方和，因为这可能是解决回归问题最常用的手段</p>
+<h2 id="代价函数的直观理解Ⅰ（Cost-Function-IntuitionⅠ）"><a href="#代价函数的直观理解Ⅰ（Cost-Function-IntuitionⅠ）" class="headerlink" title="代价函数的直观理解Ⅰ（Cost Function - IntuitionⅠ）"></a>代价函数的直观理解Ⅰ（Cost Function - IntuitionⅠ）</h2><p>当=1，=0即J(1)=0</p>
+<p>当=0.5，=0.58即J(0.5)=0.58</p>
+<p>当=0，=2.3即J(0)=2.3</p>
+<h2 id="代价函数的直观理解Ⅱ（Cost-Function-IntuitionⅡ）"><a href="#代价函数的直观理解Ⅱ（Cost-Function-IntuitionⅡ）" class="headerlink" title="代价函数的直观理解Ⅱ（Cost Function - IntuitionⅡ）"></a>代价函数的直观理解Ⅱ（Cost Function - IntuitionⅡ）</h2><p>通过等高线图理解</p>
+<h2 id="梯度下降（Gradient-Descent）"><a href="#梯度下降（Gradient-Descent）" class="headerlink" title="梯度下降（Gradient Descent）"></a>梯度下降（Gradient Descent）</h2><p>基本思想：开始时随机选择一个参数的组合（，,…..,），计算代价函数，寻找下一个能让代价函数值下降最多的参数组合，持续这么做知道得到一个局部最小值（local minimum）。由于并未尝试所有的参数组合，故不能确定是否为全局最小值（global minimum）</p>
+<p>批量梯度下降（batch gradient descent）算法公式：</p>
+<p>α为学习速率（learning rate），决定了沿着能让代价函数下降程度最大方向迈出的步子有多大。在批量梯度下降中，每次都要同时让所有的参数减去学习速率乘以代价函数的导数（注意需要同时更新，）</p>
+<h2 id="梯度下降的直观理解（Gradient-Descent-Intuition）"><a href="#梯度下降的直观理解（Gradient-Descent-Intuition）" class="headerlink" title="梯度下降的直观理解（Gradient Descent Intuition）"></a>梯度下降的直观理解（Gradient Descent Intuition）</h2><p>梯度下降算法：<br>描述：对θ赋值，使得J(θ)按梯度下降最快的方向进行，不断迭代直至得到局部最小值</p>
+<p>若α过小，即学习速率太小，则速度过慢，需要很多步才能达到全局最小值<br>若α过大，那么梯度下降算法可能会越过最低点，导致无法收敛，甚至发散<br>随着梯度下降算法的运行，移动的幅度会自动变得越来越小，直到最终移动幅度非常小，导数趋于0，则已经收敛到局部最小值。所有实际上没必要再另外减小α</p>
+<h2 id="梯度下降的线性回归（Gradient-Descent-For-Linear-Regression）"><a href="#梯度下降的线性回归（Gradient-Descent-For-Linear-Regression）" class="headerlink" title="梯度下降的线性回归（Gradient Descent For Linear Regression）"></a>梯度下降的线性回归（Gradient Descent For Linear Regression）</h2><p>将梯度下降和代价函数结合，应用于具体的拟合直线的线性回归算法中，梯度下降算法和线性回归算法比较如下：</p>
+<p>对线性回归问题运用梯度下降算法，即求出代价函数的导数：</p>
+<p>此算法又被称为批量梯度下降，指的是，在梯度下降的每一步中，都用到了所有的训练样本</p>
+<h1 id="线性代数回顾（Linear-Algebra-Review）"><a href="#线性代数回顾（Linear-Algebra-Review）" class="headerlink" title="线性代数回顾（Linear Algebra Review）"></a>线性代数回顾（Linear Algebra Review）</h1><p>矩阵和向量（Matrices and Vectors）<br>加法和标量乘法（Addition and Scalar Multiplication）<br>矩阵向量乘法（Matrix Vector Multiplication）</p>
+<p>矩阵乘法（Matrix-matrix Multiplication）</p>
+<p>奇异/退化矩阵（singular / degenerate matrix）：逆矩阵不存在的矩阵<br>逆矩阵、转置矩阵（Inverse and Transpose Matrix）</p>
+
+        
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -452,26 +627,23 @@
         
     
 
-    <!-- categories -->
-            <li class="dropdown">
-                <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                    <i class="material-icons sidebar-material-icons">apps</i>
-                    <?php if ($this->options->langis == '0'): ?> Categories
-                    <?php elseif ($this->options->langis == '1'): ?> 分类
-                    <?php endif; ?>
-                    <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu" for="show-category-button">
-                    <?php $this->widget('Widget_Metas_Category_List')->to($category); ?>
-                    <?php while ($category->next()): ?>
-                    <li>
-                        <a href="<?php $category->permalink(); ?>" title="<?php $category->name(); ?>">
-                            <?php $category->name(); ?>
-                        </a>
-                    </li>
-                    <?php endwhile; ?>
-                </ul>
-            </li>
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li> 
+                <a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">1</span></a>
+            </li></ul>
+        </li>
+        
+    
 
     <!-- Pages  -->
     
