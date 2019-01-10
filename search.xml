@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>BST、AVL、并查集、堆、哈夫曼</title>
+      <link href="/%E7%AE%97%E6%B3%95/BST%E3%80%81AVL%E3%80%81%E5%B9%B6%E6%9F%A5%E9%9B%86%E3%80%81%E5%A0%86%E3%80%81%E5%93%88%E5%A4%AB%E6%9B%BC/"/>
+      <url>/%E7%AE%97%E6%B3%95/BST%E3%80%81AVL%E3%80%81%E5%B9%B6%E6%9F%A5%E9%9B%86%E3%80%81%E5%A0%86%E3%80%81%E5%93%88%E5%A4%AB%E6%9B%BC/</url>
+      
+        <content type="html"><![CDATA[<h2 id="二叉查找树"><a href="#二叉查找树" class="headerlink" title="二叉查找树"></a>二叉查找树</h2><p>左结点数据域小于根，右结点数据域大于根</p><pre class=" language-lang-c"><code class="language-lang-c">struct node{    int data;    node *left, *right;};//查找数据域为x的结点void search(node* root, int x){    if (!root)  return;     if (root->data == x)        printf("%d", root->data);    else if (x < root->data)        search(root->left, x);    else        search(root->right, x);}//建立新结点node* newNode(int x){    node* root = new node;    root->data = x;    root->left = root->right = NULL;    return root;}//插入值为x的结点(注意root要加&)void insert(node* &root, int x){    if (!root) {        root = newNode(x);        return;    }    if (x == root->data)        return;    else if (x < root->data)        insert(root->left, x);    else        insert(root->right, x)}//BST的建立node* creat(int data[], int n){    node* root = NULL;    for (int i = 0; i < n; i++)        insert(root, data[i]);  //将data插入到树中    return root;}//寻找以root为根结点的树中的最大权值的结点node* findMax(node* root){    while (root->right)        root = root->right; //不断往右，直到没有右孩子    return root;}//寻找以root为根结点的树中的最小权值的结点node* findMin(node* root){    while (root->left)        root = root->left;  //不断往左，直到没有左孩子    return root;}//删除权值为x的结点void deleteNode(node* &root, int x){    if (!root)  return;    if (root->data == x) {  //找到欲删除结点        if (!root->left && !root->right) {  //叶结点直接删除            root = NULL;    //直接把地址设为空        } else if (!root->left) {   //左子树不为空时            node* pre = findMax(root->left);    //找root的前趋            root->data = pre->data; //用前趋覆盖root            deleteNode(root->left, pre->data);  //在左子树中删除结点pre        } else {    //右子树不为空时            node* next = findMin(root->right);  //找root的后继            root->data = next->data;    //用后继覆盖root            deleteNode(root->right, next->data);//在右子树中删除结点next        }    } else if(root->data > x)        deleteNode(root->left, x);    else        deleteNode(root->right, x);}</code></pre><h3 id="BST的应用"><a href="#BST的应用" class="headerlink" title="BST的应用"></a>BST的应用</h3><p>给出n个整数来作为一棵二叉排序树的结点插入顺序，问：这串序列是否是该二叉树的先序序列或其镜像树的先序序列<br>如果是，则输出YES，并输出对应的树的后序序列；否则，输出NO<br>输入样例:<br>7<br>8 6 5 7 10 8 11<br>输出样例:<br>Yes<br>5 7 6 8 11 10 8</p><pre class=" language-lang-c"><code class="language-lang-c">#include<bits/stdc++.h>using namespace std;struct node{    int data;    node *left, *right;};void insert(node* &root, int data){    if (!root) {        root = new node;        root->data = data;        root->left = root->right = NULL;        return;    }    if (data < root->data)        insert(root->left, data);    else        insert(root->right, data);}//先序遍历void preOrder(node* root, vector<int> &vi){    if (!root)  return;    vi.push_back(root->data);    preOrder(root->left, vi);    preOrder(root->right, vi);}//镜像树的先序遍历void preMirror(node* root, vector<int> &vi){    if (!root)  return;    vi.push_back(root->data);    preMirror(root->right, vi);    preMirror(root->left, vi);}//后序遍历void postOrder(node* root, vector<int> &vi){    if (!root) return;    postOrder(root->left, vi);    postOrder(root->right, vi);    vi.push_back(root->data);}//镜像树的后序遍历void postMirror(node* root, vector<int> &vi){    if (!root) return;    postOrder(root->right, vi);    postOrder(root->left, vi);    vi.push_back(root->data);}//origin存放初始序列//pre、preM为先序，post、postM为后序vector<int> origin, pre, preM, post, postM;int main(){    int n, data;    node* root = NULL;    scanf("%d", &n);    for (int i = 0; i < n; i++) {        scanf("%d", &data);        origin.push_back(data);        insert(root, data);    }    preOrder(root, pre);    preMirror(root, preM);    postOrder(root, post);    postMirror(root, postM);    if (origin == pre) {        printf("YES\n");        for(int i = 0; i < pre.size(); i++) {            printf("%d ", post[i]);        }    } else if (origin == preM) {        printf("YES\n");        for(int i = 0; i < preM.size(); i++) {            printf("%d ", postM[i]);        }    } else        printf("NO\n");}</code></pre><h2 id="平衡二叉树"><a href="#平衡二叉树" class="headerlink" title="平衡二叉树"></a>平衡二叉树</h2><h3 id="AVL定义"><a href="#AVL定义" class="headerlink" title="AVL定义"></a>AVL定义</h3><p>对于任意结点，其左子树、右子树的高度之差的绝对值不超过1</p><pre class=" language-lang-c"><code class="language-lang-c">struct node{    int v, height;    node *lchild, *rchild;};//生成新结点 node* newNode(int v){    node* root = new node;    root->v = v;    root->height = 1; //初始高度为1    root->lchild = root->rchild = NULL;    return root;}//获取以root为根结点的子树的当前heightint getHeight(node* root){    return root ? root->height : 0;}//计算结点root的平衡因子int getBalanceFactor(node* root){    return getHeight(root->lchild) - getHeight(root->rchild);}//更新root的heightvoid updateHeight(node* root){    root->height = 1 + max(getHeight(root->lchild), getHeight(root->rchild));}</code></pre><h3 id="AVL基本操作"><a href="#AVL基本操作" class="headerlink" title="AVL基本操作"></a>AVL基本操作</h3><p>AVL树插入情况(BF表示平衡因子)</p><div class="table-container"><table><thead><tr><th style="text-align:center">树型</th><th style="text-align:center">判定条件</th><th style="text-align:center">调整方法  </th></tr></thead><tbody><tr><td style="text-align:center">LL</td><td style="text-align:center">BF(root)=2, BF(root-&gt;lchild)=1</td><td style="text-align:center">对root进行右旋</td></tr><tr><td style="text-align:center">LR</td><td style="text-align:center">BF(root)=2, BF(root-&gt;lchild)=-1</td><td style="text-align:center">先对root-&gt;lchild进行左旋，再对root进行右旋</td></tr><tr><td style="text-align:center">RR</td><td style="text-align:center">BF(root)=-2, BF(root-&gt;rchild)=-1</td><td style="text-align:center">对root进行左旋</td></tr><tr><td style="text-align:center">RL</td><td style="text-align:center">BF(root)=-2, BF(root-&gt;rchild)=1</td><td style="text-align:center">先对root-&gt;rchild进行右旋，再对root进行左旋</td></tr></tbody></table></div><pre class=" language-lang-c"><code class="language-lang-c">//左旋void L(node* &root){    node* temp = root->rchild;    root->rchild = temp->lchild;    temp->lchild = root;    updateHeight(root);    updateHeight(temp);    root = temp;}//右旋void R(node* &root){    node* temp = root->lchild;    root->lchild = temp->rchild;    temp->rchild = root;    updateHeight(root);    updateHeight(temp);    root = temp;}//插入结点void insert(node* &root, int v){    if (!root) {        root = newNode(v);        return;    }    if (v < root->v) {  //v比根结点的权值小        insert(root->lchild, v);//往左子树插入        updateHeight(root);//更新树高        if (getBalanceFactor(root) == 2) {            if (getBalanceFactor(root->lchild) == 1)    //LL型                R(root);            else if (getBalanceFactor(root->lchild) == -1) { //LR型                L(root->lchild);                R(root);            }        }    } else {        insert(root->rchild, v);        updateHeight(root);        if (getBalanceFactor(root) == -2) {            if (getBalanceFactor(root->rchild) == -1) { //RR型                L(root);            } else if (getBalanceFactor(root->lchild) == 1) { //RL型                R(root->rchild);                L(root);            }        }    }}</code></pre><h2 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h2><pre class=" language-lang-c"><code class="language-lang-c">const int maxn = 100;int father[maxn];//返回x所在集合的根结点int findFather(int x){    return x == father[x] ? x : findFather(father[x]);}//合并结点void merge(int a, int b){    int fa = findFather(a);    int fb = findFather(b);    if (fa != fb)        father[fa] = fb;}//路径压缩，将当前查询结点的路径上的所有结点的父结点都指向根结点//循环写法int findFather1(int x){    //由于x会变成根结点，故先保存    int a = x;      while(x != father[x]) {//寻找根结点        x = father[x];    }    //将路径上所有结点的father改为x    while(a != father[a]) {        int z = a;        a  = father[a];//a回溯父结点        father[z] = x;    }    return x;}//递归写法int findFather2(int x){    if (x == father[x]) return;    int f = findFather(father[x]);    father[x] = f;    return f;}</code></pre><h2 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h2><p>堆是一棵完全二叉树。若父结点的值大于或等于孩子结点的值，那么即为大顶堆；若父结点的值小于或等于孩子结点的值，则为小顶堆</p><pre class=" language-lang-c"><code class="language-lang-c">const int maxn = 100;//heap为堆，n为元素个数int heap[maxn], n = 10;//对heap数组在[low，high]的范围进行向下调整//其中low为欲调整结点的数组下标，high一般为堆的最后一个结点的数组下标void downAdjust(int low, int high){    int i = low, j = i * 2;//i为欲调整结点，j为其左孩子    while(j <= high) {//存在孩子结点        if(j + 1 <= high && heap[j + 1] > heap[j])            j = j + 1;//右孩子大则存储右孩子下标        //如果孩子中最大的权值比欲调整的结点i大        if (heap[j] > heap[i]) {            swap(heap[i], heap[j]);//交换            i = j;//保持i为欲调整结点，j为孩子结点            j = i * 2;        } else            break;    }}//建堆void createHeap(){    for (int i = n / 2; i >= 1; i--)        downAdjust(i, n);}//删除堆顶元素void deleteTop(){    heap[1] = heap[n--];//最后一个元素覆盖堆顶元素    downAdjust(1, n);}//对heap数组在[low，high]的范围进行向上调整//其中low一般设置为1，high表示欲调整结点的数组下标void upAdjust(int low, int high){    int i = high, j = i / 2;//i为欲调整结点，j为其父结点    while (j >= low) {        //父结点权值小于i        if (heap[j] < heap[i]) {            swap(heap[j], heap[i]);            i = j;//保持i为欲调整结点，j为i的父结点            j = i / 2;        } else            break;//父结点权值比欲调整结点大，结束    }}//添加元素xvoid insert(int x){    heap[++n] = x;//元素个数加1，数组末尾赋值    upAdjust(1, n);}//堆排序(递增)void heapSort(){    createHeap();//建堆    for (int i = n; i > 1; i--) {//倒着枚举，直到堆中只有一个元素        swap(heap[1], heap[i]);//交换i和堆顶        downAdjust(1, i - 1);//调整堆顶    }}</code></pre><h2 id="哈夫曼树"><a href="#哈夫曼树" class="headerlink" title="哈夫曼树"></a>哈夫曼树</h2><p>求最小带权路径</p><pre class=" language-lang-c"><code class="language-lang-c">typedef long long ll;//代表小顶堆的优先队列priority_queue<ll, vector<ll> , greater<ll> > q;int main(){    int n;    ll temp, x, y, ans = 0;    scanf("%d", &n);    for (int i = 0; i < n; i++) {        scanf("%lld", &temp);        q.push(temp);    }    while(q.size() > 1) {        x = q.top(); q.pop();        y = q.top(); q.pop();        q.push(x + y);        ans += x + y;    }    printf("%lld\n", ans);    return 0;}</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> c++ </tag>
+            
+            <tag> 数据结构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>STL常用容器和函数</title>
       <link href="/%E7%AE%97%E6%B3%95/STL/"/>
       <url>/%E7%AE%97%E6%B3%95/STL/</url>
@@ -23,8 +52,6 @@
             <tag> 算法 </tag>
             
             <tag> c++ </tag>
-            
-            <tag> 笔记 </tag>
             
         </tags>
       
@@ -49,9 +76,9 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> 机器学习 </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -76,9 +103,9 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> 机器学习 </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
       

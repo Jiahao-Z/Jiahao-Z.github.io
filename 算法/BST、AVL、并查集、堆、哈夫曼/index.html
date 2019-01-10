@@ -37,7 +37,7 @@
     
     <title>
         
-            标签: 机器学习 | 
+            BST、AVL、并查集、堆、哈夫曼 | 
         
         chao0&#39;s blog
     </title>
@@ -49,7 +49,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="chao0">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="blog">
+    <meta name="keywords" content="blog,算法,c++,数据结构">
 
     <!-- Import lsloader -->
     <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
@@ -226,15 +226,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://Jiahao-Z.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: 机器学习 | chao0&#39;s blog">
+    <meta property="og:title" content="BST、AVL、并查集、堆、哈夫曼 | chao0&#39;s blog">
     <meta property="og:image" content="https://Jiahao-Z.github.io/img/favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="算法"> <meta property="og:article:tag" content="c++"> <meta property="og:article:tag" content="数据结构"> 
 
+    
+        <meta property="article:published_time" content="Thu Jan 10 2019 21:09:58 GMT+0800">
+        <meta property="article:modified_time" content="Thu Jan 10 2019 21:17:35 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="标签: 机器学习 | chao0&#39;s blog">
+    <meta name="twitter:title" content="BST、AVL、并查集、堆、哈夫曼 | chao0&#39;s blog">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="https://Jiahao-Z.github.io/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image">
@@ -242,13 +245,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://Jiahao-Z.github.io/tags/机器学习/index.html">
+        <link rel="canonical" href="https://Jiahao-Z.github.io/算法/BST、AVL、并查集、堆、哈夫曼/index.html">
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://Jiahao-Z.github.io/算法/BST、AVL、并查集、堆、哈夫曼/index.html",
+    "headline": "BST、AVL、并查集、堆、哈夫曼",
+    "datePublished": "Thu Jan 10 2019 21:09:58 GMT+0800",
+    "dateModified": "Thu Jan 10 2019 21:17:35 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "chao0",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Stay hungry Stay Foolish"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "chao0&#39;s blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",算法,c++,数据结构blog",
+    "description": "",
+}
+</script>
 
 
     
@@ -282,161 +315,667 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
-        
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二叉查找树"><span class="post-toc-number">1.</span> <span class="post-toc-text">二叉查找树</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#BST的应用"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">BST的应用</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#平衡二叉树"><span class="post-toc-number">2.</span> <span class="post-toc-text">平衡二叉树</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#AVL定义"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">AVL定义</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#AVL基本操作"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">AVL基本操作</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#并查集"><span class="post-toc-number">3.</span> <span class="post-toc-text">并查集</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#堆"><span class="post-toc-number">4.</span> <span class="post-toc-text">堆</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#哈夫曼树"><span class="post-toc-number">5.</span> <span class="post-toc-text">哈夫曼树</span></a></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/机器学习/吴恩达机器学习/NG-ML02/">NG_ML02</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/机器学习/吴恩达机器学习/NG-ML02/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="chao0's avatar">
-            </div>
-            <div>
-                <strong>chao0</strong>
-                <span>1月 01, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/机器学习/">机器学习</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/机器学习/吴恩达机器学习/NG-ML01/">吴恩达机器学习笔记--第一周</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            1 引言
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/机器学习/吴恩达机器学习/NG-ML01/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="chao0's avatar">
-            </div>
-            <div>
-                <strong>chao0</strong>
-                <span>12月 31, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/机器学习/">机器学习</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                BST、AVL、并查集、堆、哈夫曼
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar">
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>chao0</strong>
+        <span>1月 10, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/c/">c++</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/数据结构/">数据结构</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/算法/">算法</a>
+    </li></ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=BST、AVL、并查集、堆、哈夫曼&url=https://Jiahao-Z.github.io/算法/BST、AVL、并查集、堆、哈夫曼/index.html&pic=https://Jiahao-Z.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=BST、AVL、并查集、堆、哈夫曼&url=https://Jiahao-Z.github.io/算法/BST、AVL、并查集、堆、哈夫曼/index.html&via=chao0" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://Jiahao-Z.github.io/算法/BST、AVL、并查集、堆、哈夫曼/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://Jiahao-Z.github.io/算法/BST、AVL、并查集、堆、哈夫曼/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://Jiahao-Z.github.io/算法/BST、AVL、并查集、堆、哈夫曼/index.html&title=BST、AVL、并查集、堆、哈夫曼" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="二叉查找树"><a href="#二叉查找树" class="headerlink" title="二叉查找树"></a>二叉查找树</h2><p>左结点数据域小于根，右结点数据域大于根</p>
+<pre class=" language-lang-c"><code class="language-lang-c">struct node
+{
+    int data;
+    node *left, *right;
+};
+
+//查找数据域为x的结点
+void search(node* root, int x)
+{
+    if (!root)  return; 
+    if (root->data == x)
+        printf("%d", root->data);
+    else if (x < root->data)
+        search(root->left, x);
+    else
+        search(root->right, x);
+}
+
+//建立新结点
+node* newNode(int x)
+{
+    node* root = new node;
+    root->data = x;
+    root->left = root->right = NULL;
+    return root;
+}
+
+//插入值为x的结点(注意root要加&)
+void insert(node* &root, int x)
+{
+    if (!root) {
+        root = newNode(x);
+        return;
+    }
+    if (x == root->data)
+        return;
+    else if (x < root->data)
+        insert(root->left, x);
+    else
+        insert(root->right, x)
+}
+
+//BST的建立
+node* creat(int data[], int n)
+{
+    node* root = NULL;
+    for (int i = 0; i < n; i++)
+        insert(root, data[i]);  //将data插入到树中
+    return root;
+}
+
+//寻找以root为根结点的树中的最大权值的结点
+node* findMax(node* root)
+{
+    while (root->right)
+        root = root->right; //不断往右，直到没有右孩子
+    return root;
+}
+
+//寻找以root为根结点的树中的最小权值的结点
+node* findMin(node* root)
+{
+    while (root->left)
+        root = root->left;  //不断往左，直到没有左孩子
+    return root;
+}
+
+//删除权值为x的结点
+void deleteNode(node* &root, int x)
+{
+    if (!root)  return;
+    if (root->data == x) {  //找到欲删除结点
+        if (!root->left && !root->right) {  //叶结点直接删除
+            root = NULL;    //直接把地址设为空
+        } else if (!root->left) {   //左子树不为空时
+            node* pre = findMax(root->left);    //找root的前趋
+            root->data = pre->data; //用前趋覆盖root
+            deleteNode(root->left, pre->data);  //在左子树中删除结点pre
+        } else {    //右子树不为空时
+            node* next = findMin(root->right);  //找root的后继
+            root->data = next->data;    //用后继覆盖root
+            deleteNode(root->right, next->data);//在右子树中删除结点next
+        }
+    } else if(root->data > x)
+        deleteNode(root->left, x);
+    else
+        deleteNode(root->right, x);
+}
+</code></pre>
+<h3 id="BST的应用"><a href="#BST的应用" class="headerlink" title="BST的应用"></a>BST的应用</h3><p>给出n个整数来作为一棵二叉排序树的结点插入顺序，问：这串序列是否是该二叉树的先序序列或其镜像树的先序序列<br>如果是，则输出YES，并输出对应的树的后序序列；否则，输出NO<br>输入样例:<br>7<br>8 6 5 7 10 8 11<br>输出样例:<br>Yes<br>5 7 6 8 11 10 8</p>
+<pre class=" language-lang-c"><code class="language-lang-c">#include<bits stdc++.h="">
+using namespace std;
+
+struct node
+{
+    int data;
+    node *left, *right;
+};
+
+void insert(node* &root, int data)
+{
+    if (!root) {
+        root = new node;
+        root->data = data;
+        root->left = root->right = NULL;
+        return;
+    }
+    if (data < root->data)
+        insert(root->left, data);
+    else
+        insert(root->right, data);
+}
+
+//先序遍历
+void preOrder(node* root, vector<int> &vi)
+{
+    if (!root)  return;
+    vi.push_back(root->data);
+    preOrder(root->left, vi);
+    preOrder(root->right, vi);
+}
+
+//镜像树的先序遍历
+void preMirror(node* root, vector<int> &vi)
+{
+    if (!root)  return;
+    vi.push_back(root->data);
+    preMirror(root->right, vi);
+    preMirror(root->left, vi);
+}
+
+//后序遍历
+void postOrder(node* root, vector<int> &vi)
+{
+    if (!root) return;
+    postOrder(root->left, vi);
+    postOrder(root->right, vi);
+    vi.push_back(root->data);
+}
+
+//镜像树的后序遍历
+void postMirror(node* root, vector<int> &vi)
+{
+    if (!root) return;
+    postOrder(root->right, vi);
+    postOrder(root->left, vi);
+    vi.push_back(root->data);
+}
+
+//origin存放初始序列
+//pre、preM为先序，post、postM为后序
+vector<int> origin, pre, preM, post, postM;
+
+int main()
+{
+    int n, data;
+    node* root = NULL;
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &data);
+        origin.push_back(data);
+        insert(root, data);
+    }
+    preOrder(root, pre);
+    preMirror(root, preM);
+    postOrder(root, post);
+    postMirror(root, postM);
+    if (origin == pre) {
+        printf("YES\n");
+        for(int i = 0; i < pre.size(); i++) {
+            printf("%d ", post[i]);
+        }
+    } else if (origin == preM) {
+        printf("YES\n");
+        for(int i = 0; i < preM.size(); i++) {
+            printf("%d ", postM[i]);
+        }
+    } else
+        printf("NO\n");
+}
+</int></int></int></int></int></bits></code></pre>
+<h2 id="平衡二叉树"><a href="#平衡二叉树" class="headerlink" title="平衡二叉树"></a>平衡二叉树</h2><h3 id="AVL定义"><a href="#AVL定义" class="headerlink" title="AVL定义"></a>AVL定义</h3><p>对于任意结点，其左子树、右子树的高度之差的绝对值不超过1</p>
+<pre class=" language-lang-c"><code class="language-lang-c">struct node
+{
+    int v, height;
+    node *lchild, *rchild;
+};
+
+//生成新结点 
+node* newNode(int v)
+{
+    node* root = new node;
+    root->v = v;
+    root->height = 1; //初始高度为1
+    root->lchild = root->rchild = NULL;
+    return root;
+}
+
+//获取以root为根结点的子树的当前height
+int getHeight(node* root)
+{
+    return root ? root->height : 0;
+}
+
+//计算结点root的平衡因子
+int getBalanceFactor(node* root)
+{
+    return getHeight(root->lchild) - getHeight(root->rchild);
+}
+
+//更新root的height
+void updateHeight(node* root)
+{
+    root->height = 1 + max(getHeight(root->lchild), getHeight(root->rchild));
+}
+</code></pre>
+<h3 id="AVL基本操作"><a href="#AVL基本操作" class="headerlink" title="AVL基本操作"></a>AVL基本操作</h3><p>AVL树插入情况(BF表示平衡因子)</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">树型</th>
+<th style="text-align:center">判定条件</th>
+<th style="text-align:center">调整方法  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">LL</td>
+<td style="text-align:center">BF(root)=2, BF(root-&gt;lchild)=1</td>
+<td style="text-align:center">对root进行右旋</td>
+</tr>
+<tr>
+<td style="text-align:center">LR</td>
+<td style="text-align:center">BF(root)=2, BF(root-&gt;lchild)=-1</td>
+<td style="text-align:center">先对root-&gt;lchild进行左旋，再对root进行右旋</td>
+</tr>
+<tr>
+<td style="text-align:center">RR</td>
+<td style="text-align:center">BF(root)=-2, BF(root-&gt;rchild)=-1</td>
+<td style="text-align:center">对root进行左旋</td>
+</tr>
+<tr>
+<td style="text-align:center">RL</td>
+<td style="text-align:center">BF(root)=-2, BF(root-&gt;rchild)=1</td>
+<td style="text-align:center">先对root-&gt;rchild进行右旋，再对root进行左旋</td>
+</tr>
+</tbody>
+</table>
+</div>
+<pre class=" language-lang-c"><code class="language-lang-c">//左旋
+void L(node* &root)
+{
+    node* temp = root->rchild;
+    root->rchild = temp->lchild;
+    temp->lchild = root;
+    updateHeight(root);
+    updateHeight(temp);
+    root = temp;
+}
+
+//右旋
+void R(node* &root)
+{
+    node* temp = root->lchild;
+    root->lchild = temp->rchild;
+    temp->rchild = root;
+    updateHeight(root);
+    updateHeight(temp);
+    root = temp;
+}
+
+//插入结点
+void insert(node* &root, int v)
+{
+    if (!root) {
+        root = newNode(v);
+        return;
+    }
+    if (v < root->v) {  //v比根结点的权值小
+        insert(root->lchild, v);//往左子树插入
+        updateHeight(root);//更新树高
+        if (getBalanceFactor(root) == 2) {
+            if (getBalanceFactor(root->lchild) == 1)    //LL型
+                R(root);
+            else if (getBalanceFactor(root->lchild) == -1) { //LR型
+                L(root->lchild);
+                R(root);
+            }
+        }
+    } else {
+        insert(root->rchild, v);
+        updateHeight(root);
+        if (getBalanceFactor(root) == -2) {
+            if (getBalanceFactor(root->rchild) == -1) { //RR型
+                L(root);
+            } else if (getBalanceFactor(root->lchild) == 1) { //RL型
+                R(root->rchild);
+                L(root);
+            }
+        }
+    }
+}
+</code></pre>
+<h2 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h2><pre class=" language-lang-c"><code class="language-lang-c">const int maxn = 100;
+
+int father[maxn];
+
+//返回x所在集合的根结点
+int findFather(int x)
+{
+    return x == father[x] ? x : findFather(father[x]);
+}
+
+//合并结点
+void merge(int a, int b)
+{
+    int fa = findFather(a);
+    int fb = findFather(b);
+    if (fa != fb)
+        father[fa] = fb;
+}
+
+//路径压缩，将当前查询结点的路径上的所有结点的父结点都指向根结点
+//循环写法
+int findFather1(int x)
+{
+    //由于x会变成根结点，故先保存
+    int a = x;  
+    while(x != father[x]) {//寻找根结点
+        x = father[x];
+    }
+    //将路径上所有结点的father改为x
+    while(a != father[a]) {
+        int z = a;
+        a  = father[a];//a回溯父结点
+        father[z] = x;
+    }
+    return x;
+}
+
+
+//递归写法
+int findFather2(int x)
+{
+    if (x == father[x]) return;
+    int f = findFather(father[x]);
+    father[x] = f;
+    return f;
+}
+</code></pre>
+<h2 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h2><p>堆是一棵完全二叉树。若父结点的值大于或等于孩子结点的值，那么即为大顶堆；若父结点的值小于或等于孩子结点的值，则为小顶堆</p>
+<pre class=" language-lang-c"><code class="language-lang-c">const int maxn = 100;
+//heap为堆，n为元素个数
+int heap[maxn], n = 10;
+
+//对heap数组在[low，high]的范围进行向下调整
+//其中low为欲调整结点的数组下标，high一般为堆的最后一个结点的数组下标
+void downAdjust(int low, int high)
+{
+    int i = low, j = i * 2;//i为欲调整结点，j为其左孩子
+    while(j <= 1="" high)="" {="" 存在孩子结点="" if(j="" +="" <="high" &&="" heap[j="" 1]=""> heap[j])
+            j = j + 1;//右孩子大则存储右孩子下标
+        //如果孩子中最大的权值比欲调整的结点i大
+        if (heap[j] > heap[i]) {
+            swap(heap[i], heap[j]);//交换
+            i = j;//保持i为欲调整结点，j为孩子结点
+            j = i * 2;
+        } else
+            break;
+    }
+}
+
+//建堆
+void createHeap()
+{
+    for (int i = n / 2; i >= 1; i--)
+        downAdjust(i, n);
+}
+
+//删除堆顶元素
+void deleteTop()
+{
+    heap[1] = heap[n--];//最后一个元素覆盖堆顶元素
+    downAdjust(1, n);
+}
+
+//对heap数组在[low，high]的范围进行向上调整
+//其中low一般设置为1，high表示欲调整结点的数组下标
+void upAdjust(int low, int high)
+{
+    int i = high, j = i / 2;//i为欲调整结点，j为其父结点
+    while (j >= low) {
+        //父结点权值小于i
+        if (heap[j] < heap[i]) {
+            swap(heap[j], heap[i]);
+            i = j;//保持i为欲调整结点，j为i的父结点
+            j = i / 2;
+        } else
+            break;//父结点权值比欲调整结点大，结束
+    }
+}
+
+//添加元素x
+void insert(int x)
+{
+    heap[++n] = x;//元素个数加1，数组末尾赋值
+    upAdjust(1, n);
+}
+
+//堆排序(递增)
+void heapSort()
+{
+    createHeap();//建堆
+    for (int i = n; i > 1; i--) {//倒着枚举，直到堆中只有一个元素
+        swap(heap[1], heap[i]);//交换i和堆顶
+        downAdjust(1, i - 1);//调整堆顶
+    }
+}
+</=></code></pre>
+<h2 id="哈夫曼树"><a href="#哈夫曼树" class="headerlink" title="哈夫曼树"></a>哈夫曼树</h2><p>求最小带权路径</p>
+<pre class=" language-lang-c"><code class="language-lang-c">typedef long long ll;
+
+//代表小顶堆的优先队列
+priority_queue<ll, vector<ll=""> , greater<ll> > q;
+
+int main()
+{
+    int n;
+    ll temp, x, y, ans = 0;
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++) {
+        scanf("%lld", &temp);
+        q.push(temp);
+    }
+    while(q.size() > 1) {
+        x = q.top(); q.pop();
+        y = q.top(); q.pop();
+        q.push(x + y);
+        ans += x + y;
+    }
+    printf("%lld\n", ans);
+    return 0;
+}
+</ll></ll,></code></pre>
+
+        
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/算法/STL/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -603,6 +1142,14 @@ It will not impact the appearance and can give developers a lot of support :)
                     
 
                     
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
 
                     <!--Footer-->
 <footer class="mdl-mini-footer" id="bottom">
@@ -763,6 +1310,26 @@ It will not impact the appearance and can give developers a lot of support :)
 </script>
 
 <!-- MathJax Load-->
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+    <script src="true?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
 
 
 <!-- Bing Background -->
